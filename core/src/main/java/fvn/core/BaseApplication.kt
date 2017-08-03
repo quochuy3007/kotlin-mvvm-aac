@@ -1,7 +1,7 @@
-package fvn.div2.core
+package fvn.core
 
 import android.app.Application
-import fvn.div2.core.di.component.NetComponent
+import fvn.core.di.component.NetComponent
 
 /**
  * Created by nguyen.thanh.cong on 02/08/2017.

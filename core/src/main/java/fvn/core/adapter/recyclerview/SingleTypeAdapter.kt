@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package fvn.div2.core.adapter.recyclerview
+package fvn.core.adapter.recyclerview
 
 import android.content.Context
 import android.databinding.DataBindingUtil

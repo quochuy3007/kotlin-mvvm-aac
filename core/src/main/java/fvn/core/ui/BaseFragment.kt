@@ -1,7 +1,6 @@
-package fvn.div2.core.ui;
+package fvn.core.ui
 
 /**
  * Created by nguyen.thanh.cong on 02/08/2017.
  */
-public class BaseFragment {
-}
+abstract class BaseFragment

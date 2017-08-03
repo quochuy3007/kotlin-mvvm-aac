@@ -1,4 +1,4 @@
-package fvn.div2.core.ui
+package fvn.core.ui
 
 import android.app.Activity
 import android.arch.lifecycle.LifecycleRegistry
@@ -12,9 +12,8 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
-import fvn.div2.core.BR
-import fvn.div2.core.unsafeLazy
-import fvn.div2.core.viewmodel.BaseViewModel
+import fvn.core.unsafeLazy
+import fvn.core.viewmodel.BaseViewModel
 import javax.inject.Inject
 
 /**
@@ -40,7 +39,7 @@ abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppComp
     }
 
     fun init(savedInstanceState: Bundle?) {
-        if (!binding.setVariable(BR.viewModel, viewModel)) {
+        if (!binding.setVariable(fvn.core.BR.viewModel, viewModel)) {
             throw IllegalArgumentException("You should add 'viewModel' variable")
         }
     }

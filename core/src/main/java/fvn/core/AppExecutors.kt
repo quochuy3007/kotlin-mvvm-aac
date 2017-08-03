@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package fvn.div2.core
+package fvn.core
 
 import android.os.Handler
 import android.os.Looper

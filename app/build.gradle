@@ -5,7 +5,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "fvn.div2.coreproject"
+        applicationId "fvn.coreproject"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

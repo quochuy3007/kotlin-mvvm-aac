@@ -1,4 +1,4 @@
-package fvn.div2.core.di.key
+package fvn.core.di.key
 
 import android.arch.lifecycle.ViewModel
 import dagger.MapKey

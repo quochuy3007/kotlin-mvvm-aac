@@ -1,8 +1,8 @@
-package fvn.div2.core.ui
+package fvn.core.ui
 
 import android.app.Activity
 import android.databinding.ViewDataBinding
-import fvn.div2.core.viewmodel.BaseViewModel
+import fvn.core.viewmodel.BaseViewModel
 
 /**
  * Created by nguyen.thanh.cong on 02/08/2017.

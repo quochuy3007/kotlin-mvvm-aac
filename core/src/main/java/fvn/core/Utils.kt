@@ -1,4 +1,4 @@
-package fvn.div2.core
+package fvn.core
 
 /**
  * Created by nguyen.thanh.cong on 02/08/2017.

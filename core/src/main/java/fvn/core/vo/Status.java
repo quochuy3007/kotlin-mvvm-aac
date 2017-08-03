@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package fvn.div2.core.vo;
+package fvn.core.vo;
 
 /**
  * Status of a resource that is provided to the UI.

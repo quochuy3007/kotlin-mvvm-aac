@@ -1,4 +1,4 @@
-package fvn.div2.core;
+package fvn.core;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

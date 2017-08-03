@@ -1,10 +1,10 @@
-package fvn.div2.core.di.module
+package fvn.core.di.module
 
 import android.arch.lifecycle.ViewModelProvider
 
 import dagger.Binds
 import dagger.Module
-import fvn.div2.core.viewmodel.ViewModelFactory
+import fvn.core.viewmodel.ViewModelFactory
 
 @Module
 internal abstract class ViewModelModule {

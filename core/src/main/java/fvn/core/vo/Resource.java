@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package fvn.div2.core.vo;
+package fvn.core.vo;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import static fvn.div2.core.vo.Status.ERROR;
-import static fvn.div2.core.vo.Status.LOADING;
-import static fvn.div2.core.vo.Status.SUCCESS;
+import static fvn.core.vo.Status.ERROR;
+import static fvn.core.vo.Status.LOADING;
+import static fvn.core.vo.Status.SUCCESS;
 
 /**
  * A generic class that holds a value with its loading status.

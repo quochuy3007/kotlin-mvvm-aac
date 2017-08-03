@@ -5,11 +5,11 @@
 
         <variable
             name="viewModel"
-            type="fvn.div2.core.viewmodel.BaseViewModel"/>
+            type="fvn.core.viewmodel.BaseViewModel"/>
 
         <variable
             name="listener"
-            type="fvn.div2.core.viewmodel.BaseViewModel"/>
+            type="fvn.core.viewmodel.BaseViewModel"/>
 
         <variable
             name="position"

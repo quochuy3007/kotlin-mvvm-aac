@@ -1,4 +1,4 @@
-package fvn.div2.core.viewmodel
+package fvn.core.viewmodel
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel

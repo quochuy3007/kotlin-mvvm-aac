@@ -1,4 +1,4 @@
-package fvn.div2.core;
+package fvn.core;
 
 import org.junit.Test;
 

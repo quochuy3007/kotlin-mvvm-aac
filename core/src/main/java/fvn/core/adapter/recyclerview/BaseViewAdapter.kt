@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package fvn.div2.core.adapter.recyclerview
+package fvn.core.adapter.recyclerview
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import fvn.div2.core.BR;
+import fvn.core.BR;
 /**
  * Base Data Binding RecyclerView Adapter.
 

@@ -1,4 +1,4 @@
-package fvn.div2.core.di.module
+package fvn.core.di.module
 
 import android.app.Application
 import android.content.SharedPreferences
