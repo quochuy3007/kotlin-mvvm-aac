@@ -10,7 +10,9 @@ import fvn.core.viewmodel.BaseViewModel
 interface IView<TB : ViewDataBinding, TM : BaseViewModel> {
     val viewModel: TM
     val binding: TB
+    val callback : ICallBack
     val activity: Activity
     var layoutId: Int
+
     fun showLoading(isShow: Boolean)
 }

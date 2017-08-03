@@ -12,6 +12,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
+import fvn.core.BR
 import fvn.core.unsafeLazy
 import fvn.core.viewmodel.BaseViewModel
 import javax.inject.Inject
@@ -22,7 +23,7 @@ import javax.inject.Inject
 abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity(),
         IView<VDB, VM>, LifecycleRegistryOwner, HasSupportFragmentInjector {
     /***
-     * Class of this file, for example : BaseViewModel::
+     * Class of this file, for example : BaseViewModel::class.java
      */
     protected abstract val vmToken: Class<VM>
     private val lifecycleRegistry = LifecycleRegistry(this)
@@ -30,6 +31,7 @@ abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppComp
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
     override fun getLifecycle(): LifecycleRegistry {
         return lifecycleRegistry
     }
@@ -42,11 +44,12 @@ abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppComp
         if (!binding.setVariable(fvn.core.BR.viewModel, viewModel)) {
             throw IllegalArgumentException("You should add 'viewModel' variable")
         }
+        binding.setVariable(BR.callback,callback)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        init(savedInstanceState);
+        init(savedInstanceState)
     }
 
     override val activity: Activity

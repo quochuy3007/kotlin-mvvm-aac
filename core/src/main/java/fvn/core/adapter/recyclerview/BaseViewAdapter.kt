@@ -19,6 +19,8 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import fvn.core.BR;
+import fvn.core.ui.ICallBack
+
 /**
  * Base Data Binding RecyclerView Adapter.
 
@@ -27,14 +29,14 @@ import fvn.core.BR;
 abstract class BaseViewAdapter<T>(context: Context) : RecyclerView.Adapter<BindingViewHolder<*>>() {
     protected val mLayoutInflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     lateinit protected var mCollection: MutableList<T?>
-    lateinit var presenter: Presenter
+    protected var mCallback: ICallBack? = null
     protected var mDecorator: Decorator? = null
 
     override fun onBindViewHolder(holder: BindingViewHolder<*>, position: Int) {
         val item = mCollection!![position]
         holder.binding.setVariable(BR.position, position)
         holder.binding.setVariable(BR.viewModel, item)
-        holder.binding.setVariable(BR.listener, presenter)
+        holder.binding.setVariable(BR.callback, mCallback)
         holder.binding.executePendingBindings()
         if (mDecorator != null) {
             mDecorator!!.decorator(holder, position, getItemViewType(position))
@@ -62,9 +64,9 @@ abstract class BaseViewAdapter<T>(context: Context) : RecyclerView.Adapter<Bindi
     fun setDecorator(decorator: Decorator) {
         mDecorator = decorator
     }
-
-    interface Presenter
-
+    fun setCallback(callback : ICallBack){
+        mCallback = callback;
+    }
     interface Decorator {
         fun decorator(holder: BindingViewHolder<*>, position: Int, viewType: Int)
     }

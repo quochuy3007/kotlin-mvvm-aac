@@ -8,8 +8,8 @@
             type="fvn.core.viewmodel.BaseViewModel"/>
 
         <variable
-            name="listener"
-            type="fvn.core.viewmodel.BaseViewModel"/>
+            name="callback"
+            type="fvn.core.ui.ICallBack"/>
 
         <variable
             name="position"

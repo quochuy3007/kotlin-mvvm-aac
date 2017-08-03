@@ -19,6 +19,7 @@ import android.content.Context
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.view.ViewGroup
+import fvn.core.ui.ICallBack
 import java.util.*
 
 /**
@@ -72,7 +73,7 @@ Int = 0) : BaseViewAdapter<T>(context) {
         notifyDataSetChanged()
     }
 
-    interface Presenter<T> : BaseViewAdapter.Presenter {
+    interface Presenter<T> : ICallBack {
         fun onItemClick(t: T)
     }
 }
